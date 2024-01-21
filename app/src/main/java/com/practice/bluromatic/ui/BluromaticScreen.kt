@@ -45,6 +45,10 @@ import com.practice.bluromatic.R
 import com.practice.bluromatic.data.BlurAmount
 import com.practice.bluromatic.ui.theme.BluromaticTheme
 
+//This is one of the most difficult project i have worked on i still dont
+//whats going on with the code and what each one represent
+//I also noticed that is i start my code i will ge another
+//image and not the image i put
 @Composable
 fun BluromaticScreen(blurViewModel: BlurViewModel =
                          viewModel(factory = BlurViewModel.Factory)) {
