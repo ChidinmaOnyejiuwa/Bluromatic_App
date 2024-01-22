@@ -56,12 +56,6 @@ fun makeStatusNotification(message: String, context: Context) {
     NotificationManagerCompat.from(context).notify(NOTIFICATION_ID, builder.build())
 }
 
-/**
- * Blurs the given Bitmap image
- * @param bitmap Image to blur
- * @param blurLevel Blur level input
- * @return Blurred bitmap image
- */
 @WorkerThread
 fun blurBitmap(bitmap: Bitmap, blurLevel: Int): Bitmap {
     val input = Bitmap.createScaledBitmap(
@@ -73,13 +67,7 @@ fun blurBitmap(bitmap: Bitmap, blurLevel: Int): Bitmap {
     return Bitmap.createScaledBitmap(input, bitmap.width, bitmap.height, true)
 }
 
-/**
- * Writes bitmap to a temporary file and returns the Uri for the file
- * @param applicationContext Application context
- * @param bitmap Bitmap to write to temp file
- * @return Uri for temp file with bitmap
- * @throws FileNotFoundException Throws if bitmap file cannot be found
- */
+
 @Throws(FileNotFoundException::class)
 fun writeBitmapToFile(applicationContext: Context, bitmap: Bitmap): Uri {
     val name = String.format("blur-filter-output-%s.png", UUID.randomUUID().toString())
